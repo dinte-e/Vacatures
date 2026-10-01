@@ -43,11 +43,7 @@
     {
       "naam": "Google Alert: studentenwelzijn",
       "google_zoekopdracht": "vacature \"student wellbeing officer\" OR studentenwelzijn OR \"student welzijn\"",
-      "url": "<feed xmlns="http://www.w3.org/2005/Atom" xmlns:idx="urn:atom-extension:indexing">
-<id>tag:google.com,2005:reader/user/16653873032599811621/state/com.google/alerts/4262494875022351954</id>
-<title>Google Alert - vacature "student wellbeing officer" OR studentenwelzijn OR "student welzijn"</title>
-<link href="https://www.google.com/alerts/feeds/16653873032599811621/4262494875022351954" rel="self"/>
-</feed>",
+      "url": "https://www.google.com/alerts/feeds/16653873032599811621/4262494875022351954",
       "filter": "geen", "alleen_vacatures": true
     },
     {
@@ -71,11 +67,7 @@
     {
       "naam": "Google Alert: mediawijsheid",
       "google_zoekopdracht": "vacature mediawijsheid OR \"digitale geletterdheid\"",
-      "url": "<feed xmlns="http://www.w3.org/2005/Atom" xmlns:idx="urn:atom-extension:indexing">
-<id>tag:google.com,2005:reader/user/16653873032599811621/state/com.google/alerts/2435520720950913868</id>
-<title>Google Alert - vacature mediawijsheid OR "digitale geletterdheid"</title>
-<link href="https://www.google.com/alerts/feeds/16653873032599811621/2435520720950913868" rel="self"/>
-</feed>",
+      "url": "https://www.google.com/alerts/feeds/16653873032599811621/2435520720950913868",
       "filter": "geen", "alleen_vacatures": true
     },
     {
@@ -99,21 +91,13 @@
     {
       "naam": "Google Alert: basisvaardigheden",
       "google_zoekopdracht": "vacature adviseur laaggeletterdheid OR basisvaardigheden",
-      "url": "<feed xmlns="http://www.w3.org/2005/Atom" xmlns:idx="urn:atom-extension:indexing">
-<id>tag:google.com,2005:reader/user/16653873032599811621/state/com.google/alerts/7924922042824941012</id>
-<title>Google Alert - vacature adviseur laaggeletterdheid OR basisvaardigheden</title>
-<link href="https://www.google.com/alerts/feeds/16653873032599811621/7924922042824941012" rel="self"/>
-</feed>",
+      "url": "https://www.google.com/alerts/feeds/16653873032599811621/7924922042824941012",
       "filter": "geen", "alleen_vacatures": true
     },
     {
       "naam": "Google Alert: yoga & vitaliteit",
       "google_zoekopdracht": "vacature yoga OR mindfulness OR vitaliteit coördinator OR trainer OR docent",
-      "url": "<feed xmlns="http://www.w3.org/2005/Atom" xmlns:idx="urn:atom-extension:indexing">
-<id>tag:google.com,2005:reader/user/16653873032599811621/state/com.google/alerts/9206139771136174544</id>
-<title>Google Alert - vacature yoga OR mindfulness OR vitaliteit coördinator OR trainer OR docent</title>
-<link href="https://www.google.com/alerts/feeds/16653873032599811621/9206139771136174544" rel="self"/>
-</feed>",
+      "url": "https://www.google.com/alerts/feeds/16653873032599811621/9206139771136174544",
       "filter": "geen", "alleen_vacatures": true
     },
     {
@@ -125,11 +109,7 @@
     {
       "naam": "Google Alert: traineeships",
       "google_zoekopdracht": "traineeship maatschappelijk OR onderwijs OR overheid aanmelden",
-      "url": "<feed xmlns="http://www.w3.org/2005/Atom" xmlns:idx="urn:atom-extension:indexing">
-<id>tag:google.com,2005:reader/user/16653873032599811621/state/com.google/alerts/2963632025017210309</id>
-<title>Google Alert - traineeship maatschappelijk OR onderwijs OR overheid aanmelden</title>
-<link href="https://www.google.com/alerts/feeds/16653873032599811621/2963632025017210309" rel="self"/>
-</feed>",
+      "url": "https://www.google.com/alerts/feeds/16653873032599811621/2963632025017210309",
       "filter": "geen", "alleen_vacatures": true
     }
   ]
