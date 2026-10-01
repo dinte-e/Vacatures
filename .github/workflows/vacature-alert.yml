@@ -1,0 +1,55 @@
+name: Vacature-alert
+
+on:
+  schedule:
+    - cron: "0 6 * * *"   # elke dag om 06:00 UTC = 08:00 zomertijd / 07:00 wintertijd
+  workflow_dispatch:       # handmatig starten via het tabblad Actions
+    inputs:
+      modus:
+        description: "Wat wil je doen?"
+        type: choice
+        default: normaal
+        options: [normaal, test-melding, test-feeds, droog, stil]
+
+permissions:
+  contents: write          # nodig om gezien.json bij te werken
+
+jobs:
+  zoek:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Zoek nieuwe vacatures
+        env:
+          SMTP_HOST: ${{ secrets.SMTP_HOST }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+          MAIL_TO: ${{ secrets.MAIL_TO }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          case "${{ github.event.inputs.modus }}" in
+            test-melding) ARG="--test-melding" ;;
+            test-feeds)   ARG="--test-feeds" ;;
+            droog)        ARG="--droog" ;;
+            stil)         ARG="--stil" ;;
+            *)            ARG="" ;;
+          esac
+          python vacature_alert.py $ARG
+
+      - name: Onthoud gemelde vacatures
+        if: always()
+        run: |
+          if [ -f gezien.json ]; then
+            git config user.name "vacature-alert"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add gezien.json
+            git diff --cached --quiet || git commit -m "Gemelde vacatures bijgewerkt"
+            git push
+          fi
