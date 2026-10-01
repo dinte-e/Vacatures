@@ -1,0 +1,136 @@
+{
+  "_uitleg": "Zie LEESMIJ.md. Zoektermen tellen als heel woord; hoofdletters en accenten maken niet uit. Een * aan het eind betekent 'begint met' (educati* vindt ook educatief en educatieve).",
+
+  "zoektermen": {
+    "Educatie & onderwijs": [
+      "educati*", "educator", "museumdocent", "docent", "onderwijsontwikkel*", "onderwijskundig*",
+      "onderwijsadviseur", "zij-instro*", "lesmateriaal", "mediawijs*", "e-learning", "learning",
+      "opleidingsontwikkel*", "trainer", "studiebegeleid*", "studieloopbaan*"
+    ],
+    "Journalistiek & content": [
+      "redacteur", "eindredacteur", "redactie*", "journalist*", "verslaggever", "content*",
+      "copywriter", "tekstschrijver", "podcast*", "storytell*"
+    ],
+    "Welzijn & persoonlijke ontwikkeling": [
+      "welzijn*", "studentenwelzijn", "wellbeing", "well-being", "vitaliteit*", "yoga*",
+      "mindfulness", "coach*", "persoonlijke ontwikkeling", "zingeving"
+    ],
+    "Maatschappelijk & impact": [
+      "programmamedewerker", "projectmedewerker", "programmacoordinator", "projectcoordinator",
+      "impact*", "community*", "adviseur", "beleidsmedewerker", "trainee*", "publieks*",
+      "erfgoed*", "collectie*", "basisvaardigheden", "laaggeletterd*", "participatie*"
+    ]
+  },
+
+  "uitsluiten_als_in_titel": [
+    "senior", "stage", "stages", "afstudeerstage", "stagiair*", "vrijwilliger", "onbetaald",
+    "directeur", "teamleider", "hoofd", "schoonmaker", "invalkracht", "vakantiewerk", "bijbaan"
+  ],
+
+  "voorkeursplaatsen": [],
+
+  "vacature_signaalwoorden": [
+    "vacature*", "vacancy", "vacancies", "solliciteer*", "sollicitatie*", "gezocht", "zoekt",
+    "zoeken een", "werken bij", "job", "jobs", "functie", "traineeship", "traineeprogramma", "aanmelden"
+  ],
+
+  "feeds": [
+    {
+      "naam": "Culturele vacatures",
+      "url": "https://www.culturele-vacatures.nl/feed/",
+      "filter": "titel"
+    },
+    {
+      "naam": "Google Alert: studentenwelzijn",
+      "google_zoekopdracht": "vacature \"student wellbeing officer\" OR studentenwelzijn OR \"student welzijn\"",
+      "url": "<feed xmlns="http://www.w3.org/2005/Atom" xmlns:idx="urn:atom-extension:indexing">
+<id>tag:google.com,2005:reader/user/16653873032599811621/state/com.google/alerts/4262494875022351954</id>
+<title>Google Alert - vacature "student wellbeing officer" OR studentenwelzijn OR "student welzijn"</title>
+<link href="https://www.google.com/alerts/feeds/16653873032599811621/4262494875022351954" rel="self"/>
+</feed>",
+      "filter": "geen", "alleen_vacatures": true
+    },
+    {
+      "naam": "Google Alert: museumeducatie",
+      "google_zoekopdracht": "vacature museum \"medewerker educatie\" OR educator OR museumdocent",
+      "url": "PLAK_HIER_DE_RSS_LINK",
+      "filter": "geen", "alleen_vacatures": true
+    },
+    {
+      "naam": "Google Alert: onderwijsontwikkeling",
+      "google_zoekopdracht": "vacature onderwijsontwikkelaar OR \"e-learning ontwikkelaar\" OR onderwijskundige",
+      "url": "PLAK_HIER_DE_RSS_LINK",
+      "filter": "geen", "alleen_vacatures": true
+    },
+    {
+      "naam": "Google Alert: learning & development",
+      "google_zoekopdracht": "vacature opleidingsontwikkelaar OR \"learning & development\" OR \"learning designer\"",
+      "url": "PLAK_HIER_DE_RSS_LINK",
+      "filter": "geen", "alleen_vacatures": true
+    },
+    {
+      "naam": "Google Alert: mediawijsheid",
+      "google_zoekopdracht": "vacature mediawijsheid OR \"digitale geletterdheid\"",
+      "url": "<feed xmlns="http://www.w3.org/2005/Atom" xmlns:idx="urn:atom-extension:indexing">
+<id>tag:google.com,2005:reader/user/16653873032599811621/state/com.google/alerts/2435520720950913868</id>
+<title>Google Alert - vacature mediawijsheid OR "digitale geletterdheid"</title>
+<link href="https://www.google.com/alerts/feeds/16653873032599811621/2435520720950913868" rel="self"/>
+</feed>",
+      "filter": "geen", "alleen_vacatures": true
+    },
+    {
+      "naam": "Google Alert: stichtingen & projecten",
+      "google_zoekopdracht": "vacature stichting programmamedewerker OR projectmedewerker OR projectcoördinator",
+      "url": "PLAK_HIER_DE_RSS_LINK",
+      "filter": "geen", "alleen_vacatures": true
+    },
+    {
+      "naam": "Google Alert: maatschappelijke impact",
+      "google_zoekopdracht": "vacature impactadviseur OR \"maatschappelijke impact\" OR \"sociale onderneming\"",
+      "url": "PLAK_HIER_DE_RSS_LINK",
+      "filter": "geen", "alleen_vacatures": true
+    },
+    {
+      "naam": "Google Alert: journalistiek",
+      "google_zoekopdracht": "vacature \"junior redacteur\" OR redactiemedewerker OR \"jonge journalist\"",
+      "url": "PLAK_HIER_DE_RSS_LINK",
+      "filter": "geen", "alleen_vacatures": true
+    },
+    {
+      "naam": "Google Alert: basisvaardigheden",
+      "google_zoekopdracht": "vacature adviseur laaggeletterdheid OR basisvaardigheden",
+      "url": "<feed xmlns="http://www.w3.org/2005/Atom" xmlns:idx="urn:atom-extension:indexing">
+<id>tag:google.com,2005:reader/user/16653873032599811621/state/com.google/alerts/7924922042824941012</id>
+<title>Google Alert - vacature adviseur laaggeletterdheid OR basisvaardigheden</title>
+<link href="https://www.google.com/alerts/feeds/16653873032599811621/7924922042824941012" rel="self"/>
+</feed>",
+      "filter": "geen", "alleen_vacatures": true
+    },
+    {
+      "naam": "Google Alert: yoga & vitaliteit",
+      "google_zoekopdracht": "vacature yoga OR mindfulness OR vitaliteit coördinator OR trainer OR docent",
+      "url": "<feed xmlns="http://www.w3.org/2005/Atom" xmlns:idx="urn:atom-extension:indexing">
+<id>tag:google.com,2005:reader/user/16653873032599811621/state/com.google/alerts/9206139771136174544</id>
+<title>Google Alert - vacature yoga OR mindfulness OR vitaliteit coördinator OR trainer OR docent</title>
+<link href="https://www.google.com/alerts/feeds/16653873032599811621/9206139771136174544" rel="self"/>
+</feed>",
+      "filter": "geen", "alleen_vacatures": true
+    },
+    {
+      "naam": "Google Alert: zij-instroom onderwijs",
+      "google_zoekopdracht": "\"zij-instroom\" vacature docent",
+      "url": "PLAK_HIER_DE_RSS_LINK",
+      "filter": "geen", "alleen_vacatures": true
+    },
+    {
+      "naam": "Google Alert: traineeships",
+      "google_zoekopdracht": "traineeship maatschappelijk OR onderwijs OR overheid aanmelden",
+      "url": "<feed xmlns="http://www.w3.org/2005/Atom" xmlns:idx="urn:atom-extension:indexing">
+<id>tag:google.com,2005:reader/user/16653873032599811621/state/com.google/alerts/2963632025017210309</id>
+<title>Google Alert - traineeship maatschappelijk OR onderwijs OR overheid aanmelden</title>
+<link href="https://www.google.com/alerts/feeds/16653873032599811621/2963632025017210309" rel="self"/>
+</feed>",
+      "filter": "geen", "alleen_vacatures": true
+    }
+  ]
+}
