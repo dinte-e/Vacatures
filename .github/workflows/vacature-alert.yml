@@ -14,15 +14,15 @@ on:
 permissions:
   contents: write          # nodig om gezien.json bij te werken
 
+concurrency:
+  group: vacature-alert    # nooit twee runs tegelijk; een tweede wacht netjes
+  cancel-in-progress: false
+
 jobs:
   zoek:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-
-      - uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
+      - uses: actions/checkout@v5
 
       - name: Zoek nieuwe vacatures
         env:
@@ -41,7 +41,7 @@ jobs:
             stil)         ARG="--stil" ;;
             *)            ARG="" ;;
           esac
-          python vacature_alert.py $ARG
+          python3 vacature_alert.py $ARG
 
       - name: Onthoud gemelde vacatures
         if: always()
@@ -50,6 +50,10 @@ jobs:
             git config user.name "vacature-alert"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
             git add gezien.json
-            git diff --cached --quiet || git commit -m "Gemelde vacatures bijgewerkt"
-            git push
+            if ! git diff --cached --quiet; then
+              git commit -m "Gemelde vacatures bijgewerkt"
+              # haal eerst wijzigingen op die intussen zijn gedaan (bijv. nieuwe links)
+              git pull --rebase -X theirs origin "${GITHUB_REF_NAME}"
+              git push origin "HEAD:${GITHUB_REF_NAME}"
+            fi
           fi
