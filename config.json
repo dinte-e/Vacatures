@@ -55,13 +55,13 @@
     {
       "naam": "Google Alert: onderwijsontwikkeling",
       "google_zoekopdracht": "vacature onderwijsontwikkelaar OR \"e-learning ontwikkelaar\" OR onderwijskundige",
-      "url": "PLAK_HIER_DE_RSS_LINK",
+      "url": "https://www.google.com/alerts/feeds/16653873032599811621/3015086854236823305",
       "filter": "geen", "alleen_vacatures": true
     },
     {
       "naam": "Google Alert: learning & development",
       "google_zoekopdracht": "vacature opleidingsontwikkelaar OR \"learning & development\" OR \"learning designer\"",
-      "url": "PLAK_HIER_DE_RSS_LINK",
+      "url": "https://www.google.com/alerts/feeds/16653873032599811621/6469868447544301683",
       "filter": "geen", "alleen_vacatures": true
     },
     {
@@ -73,19 +73,19 @@
     {
       "naam": "Google Alert: stichtingen & projecten",
       "google_zoekopdracht": "vacature stichting programmamedewerker OR projectmedewerker OR projectcoördinator",
-      "url": "PLAK_HIER_DE_RSS_LINK",
+      "url": "https://www.google.com/alerts/feeds/16653873032599811621/5284335354601204552",
       "filter": "geen", "alleen_vacatures": true
     },
     {
       "naam": "Google Alert: maatschappelijke impact",
       "google_zoekopdracht": "vacature impactadviseur OR \"maatschappelijke impact\" OR \"sociale onderneming\"",
-      "url": "PLAK_HIER_DE_RSS_LINK",
+      "url": "https://www.google.com/alerts/feeds/16653873032599811621/4940141412157450028",
       "filter": "geen", "alleen_vacatures": true
     },
     {
       "naam": "Google Alert: journalistiek",
       "google_zoekopdracht": "vacature \"junior redacteur\" OR redactiemedewerker OR \"jonge journalist\"",
-      "url": "PLAK_HIER_DE_RSS_LINK",
+      "url": "https://www.google.com/alerts/feeds/16653873032599811621/16558368683523982357",
       "filter": "geen", "alleen_vacatures": true
     },
     {
@@ -103,7 +103,7 @@
     {
       "naam": "Google Alert: zij-instroom onderwijs",
       "google_zoekopdracht": "\"zij-instroom\" vacature docent",
-      "url": "PLAK_HIER_DE_RSS_LINK",
+      "url": "https://www.google.com/alerts/feeds/16653873032599811621/7528616363387300652",
       "filter": "geen", "alleen_vacatures": true
     },
     {
