@@ -3,13 +3,16 @@
 
   "zoektermen": {
     "Educatie & onderwijs": ["*educati*", "educator", "docent", "museumdocent", "onderwijs*", "zij-instro*", "lesmateriaal", "mediawijs*", "*mediaconsulent", "leesconsulent", "e-learning", "learning", "opleidingsontwikkel*", "trainer", "studiebegeleid*", "studieloopbaan*", "cultuurorganisator", "studieadviseur", "studentadviseur", "student advisor", "tutor", "mentor*"],
-    "Journalistiek & content": ["redacteur", "eindredacteur", "redactie*", "*journalist*", "correspondent*", "verslaggever", "content*", "copywriter", "tekstschrijver", "podcast*", "storytell*", "*journalism*", "persvrijheid", "press freedom"],
-    "Welzijn & persoonlijke ontwikkeling": ["*welzijn*", "wellbeing", "well-being", "vitaliteit*", "yoga*", "mindfulness", "coach*", "persoonlijke ontwikkeling", "zingeving"],
+    "Journalistiek & content": ["redacteur", "eindredacteur", "redactie*", "*journalist*", "correspondent*", "verslaggever", "content*", "copywriter", "tekstschrijver", "podcast*", "storytell*", "*journalism*", "persvrijheid", "press freedom", "eindredactie", "programmamaker", "radio*", "audiomaker", "producent", "debat*"],
+    "Welzijn & persoonlijke ontwikkeling": ["*welzijn*", "wellbeing", "well-being", "vitaliteit*", "yoga*", "mindfulness", "coach*", "persoonlijke ontwikkeling", "zingeving", "spiritu*", "levensbeschouw*", "meditatie", "retreat*", "ademwerk"],
     "Maatschappelijk & impact": ["programmamedewerker", "projectmedewerker", "programmacoordinator", "projectcoordinator", "impact*", "community*", "adviseur", "beleidsmedewerker", "trainee*", "publieks*", "erfgoed*", "collectie*", "basisvaardigheden", "laaggeletterd*", "participatie*", "democrati*", "burgerschap*", "*geletterdheid", "project coordinator", "programme coordinator", "program coordinator"],
     "Onderzoek & kennis": ["*onderzoeker", "onderzoeks*", "researcher", "research*", "kennismedewerker", "kennisadviseur", "kennisontwikkel*"],
     "Internationaal & Europees": ["internationalisering*", "international office", "erasmus*", "europe*", "eu-project*"],
     "Diversiteit, inclusie & gender": ["diversiteit*", "diversity", "inclusie*", "inclusiviteit", "inclusion", "gender*", "gelijke kansen", "emancipatie*", "gelijkwaardigheid"],
-    "Passende organisatie": ["Atria", "Rutgers", "Movisie", "Verwey-Jonker", "Kennisplatform Inclusief Samenleven", "Rathenau*", "Waag", "ProDemos", "Bits of Freedom", "Free Press Unlimited", "European Journalism Centre", "Are We Europe", "Nuffic"]
+    "Boeken & taal": ["uitgever*", "boeken*", "boekhandel*", "litera*", "lees*", "bureauredacteur", "editor", "corrector", "taal*", "lexicogra*", "vertal*", "schrijf*", "poezie", "spoken word"],
+    "Ontsluiten & metadata": ["index*", "metadata*", "catalogise*", "documentalist", "informatiespecialist", "archief*", "archivaris", "digitalisering*"],
+    "Gedrag & leren": ["gedrag*", "behavioural", "behavioral", "opleidings*", "leerconsultant", "l&d", "teamcoach", "teamontwikkel*", "facilitator", "procesbegeleid*"],
+    "Passende organisatie": ["Atria", "Rutgers", "Movisie", "Verwey-Jonker", "Kennisplatform Inclusief Samenleven", "Rathenau*", "Waag", "ProDemos", "Bits of Freedom", "Free Press Unlimited", "European Journalism Centre", "Are We Europe", "Nuffic", "VPRO", "NTR", "NPO", "Nooit Meer Slapen", "Letterenfonds", "Stichting Lezen", "CPNB", "Literatuurmuseum", "Writers Unlimited", "Onze Taal", "Taalunie", "Instituut voor de Nederlandse Taal", "Huygens*", "Meertens*", "Beeld en Geluid", "Koninklijke Bibliotheek", "Pakhuis de Zwijger", "De Balie", "Spui25", "Studium Generale", "Happinez", "Psychologie Magazine", "Noordhoff", "Malmberg", "ThiemeMeulenhoff"]
   },
 
   "uitsluiten_als_in_titel": ["senior", "*stage", "*stages", "*stagiair*", "intern", "internship", "vrijwilliger", "onbetaald", "directeur", "teamleider", "hoofd", "hoofdredacteur", "schoonmaker", "invalkracht", "vakantiewerk", "bijbaan", "Rutgers University"],
@@ -127,6 +130,90 @@
       "google_zoekopdracht": "vacature OR vacancy \"Free Press Unlimited\" OR \"European Journalism Centre\" OR \"Are We Europe\"",
       "url": "https://www.google.com/alerts/feeds/16653873032599811621/9865428020088654617",
       "filter": "geen", "alleen_vacatures": true, "taal_bij_google": "Alle talen"
+    },
+    {
+      "naam": "Google Alert: redacteur/researcher",
+      "google_zoekopdracht": "vacature \"redacteur researcher\" OR \"redacteur/researcher\" OR \"researcher/redacteur\" OR \"researcher redactie\"",
+      "url": "https://www.google.com/alerts/feeds/16653873032599811621/14467307507073567806",
+      "filter": "geen", "alleen_vacatures": true
+    },
+    {
+      "naam": "Google Alert: radio, podcast & omroep",
+      "google_zoekopdracht": "vacature \"Nooit meer slapen\" OR VPRO OR \"omroep Human\" OR NTR OR \"NPO Radio 1\" redacteur OR researcher OR podcastmaker",
+      "url": "https://www.google.com/alerts/feeds/16653873032599811621/4269938948598707024",
+      "filter": "geen", "alleen_vacatures": true
+    },
+    {
+      "naam": "Google Alert: uitgeverijen",
+      "google_zoekopdracht": "vacature uitgeverij redacteur OR bureauredacteur OR redactieassistent OR \"junior editor\"",
+      "url": "PLAK_HIER_DE_RSS_LINK",
+      "filter": "geen", "alleen_vacatures": true
+    },
+    {
+      "naam": "Google Alert: literatuur & lezen",
+      "google_zoekopdracht": "vacature \"Nederlands Letterenfonds\" OR \"Stichting Lezen\" OR CPNB OR Literatuurmuseum OR \"Writers Unlimited\"",
+      "url": "https://www.google.com/alerts/feeds/16653873032599811621/3691547955591726224",
+      "filter": "geen", "alleen_vacatures": true
+    },
+    {
+      "naam": "Google Alert: educatieve uitgevers",
+      "google_zoekopdracht": "vacature Noordhoff OR Malmberg OR ThiemeMeulenhoff redacteur OR \"educatief auteur\" OR ontwikkelaar",
+      "url": "PLAK_HIER_DE_RSS_LINK",
+      "filter": "geen", "alleen_vacatures": true
+    },
+    {
+      "naam": "Google Alert: taal",
+      "google_zoekopdracht": "vacature \"Onze Taal\" OR \"Instituut voor de Nederlandse Taal\" OR Taalunie OR lexicograaf OR taaladviseur",
+      "url": "PLAK_HIER_DE_RSS_LINK",
+      "filter": "geen", "alleen_vacatures": true
+    },
+    {
+      "naam": "Google Alert: indexeren & metadata",
+      "google_zoekopdracht": "vacature indexeerder OR metadataspecialist OR catalogiseerder OR documentalist OR informatiespecialist",
+      "url": "PLAK_HIER_DE_RSS_LINK",
+      "filter": "geen", "alleen_vacatures": true
+    },
+    {
+      "naam": "Google Alert: erfgoed- & kennisinstituten",
+      "google_zoekopdracht": "vacature \"Huygens Instituut\" OR \"Meertens Instituut\" OR \"Beeld en Geluid\" OR \"Koninklijke Bibliotheek\"",
+      "url": "PLAK_HIER_DE_RSS_LINK",
+      "filter": "geen", "alleen_vacatures": true
+    },
+    {
+      "naam": "Google Alert: debat- & ideeënpodia",
+      "google_zoekopdracht": "vacature \"Pakhuis de Zwijger\" OR \"De Balie\" OR Spui25 OR \"Studium Generale\" programmamaker OR redacteur OR producent",
+      "url": "https://www.google.com/alerts/feeds/16653873032599811621/4378154547556865918",
+      "filter": "geen", "alleen_vacatures": true
+    },
+    {
+      "naam": "Google Alert: gedrag & gedragsverandering",
+      "google_zoekopdracht": "vacature gedragsexpert OR gedragsinzichten OR \"behavioural insights\" OR \"adviseur gedragsverandering\"",
+      "url": "PLAK_HIER_DE_RSS_LINK",
+      "filter": "geen", "alleen_vacatures": true
+    },
+    {
+      "naam": "Google Alert: leren & teamontwikkeling",
+      "google_zoekopdracht": "vacature opleidingsadviseur OR leerconsultant OR \"L&D specialist\" OR teamcoach OR \"trainer teamontwikkeling\"",
+      "url": "PLAK_HIER_DE_RSS_LINK",
+      "filter": "geen", "alleen_vacatures": true
+    },
+    {
+      "naam": "Google Alert: tijdschriften persoonlijke groei",
+      "google_zoekopdracht": "vacature Happinez OR \"Psychologie Magazine\" OR \"Flow magazine\" redacteur OR redactie OR content",
+      "url": "PLAK_HIER_DE_RSS_LINK",
+      "filter": "geen", "alleen_vacatures": true
+    },
+    {
+      "naam": "Google Alert: zingeving & levensbeschouwing",
+      "google_zoekopdracht": "vacature zingeving OR levensbeschouwing OR spiritualiteit redacteur OR programmamaker OR coördinator",
+      "url": "https://www.google.com/alerts/feeds/16653873032599811621/2721033545211095191",
+      "filter": "geen", "alleen_vacatures": true
+    },
+    {
+      "naam": "Google Alert: yoga bij universiteiten & bedrijven",
+      "google_zoekopdracht": "vacature yogadocent OR \"yoga docent\" universiteit OR studentensport OR bedrijfsvitaliteit",
+      "url": "https://www.google.com/alerts/feeds/16653873032599811621/18172048791587967278",
+      "filter": "geen", "alleen_vacatures": true
     }
   ]
 }
