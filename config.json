@@ -34,7 +34,7 @@
     },
     {
       "naam": "Google Alert: Facilitator",
-      "google_zoekopdracht": "vacature facilitator OR "persoonlijke ontwikkeling"",
+      "google_zoekopdracht": "vacature facilitator OR \"persoonlijke ontwikkeling\"",
       "url": "https://www.google.com/alerts/feeds/16653873032599811621/16545777465600442307",
       "filter": "geen", "alleen_vacatures": true
     },
