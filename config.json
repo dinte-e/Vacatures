@@ -124,13 +124,13 @@
     {
       "naam": "Google Alert: diversiteit, inclusie & gender",
       "google_zoekopdracht": "vacature \"diversiteit en inclusie\" OR gendergelijkheid OR \"gender equality\" medewerker OR adviseur OR officer",
-      "url": "https://www.google.com/alerts/feeds/16653873032599811621/14441315892772951904",
+      "url": "https://www.google.com/alerts/feeds/16653873032599811621/8748788333832728036",
       "filter": "titel", "alleen_vacatures": "titel", "taal_bij_google": "Alle talen"
     },
     {
       "naam": "Google Alert: persvrijheid & Europese journalistiek",
       "google_zoekopdracht": "vacature OR vacancy \"Free Press Unlimited\" OR \"European Journalism Centre\" OR \"Are We Europe\"",
-      "url": "https://www.google.com/alerts/feeds/16653873032599811621/9865428020088654617",
+      "url": "https://www.google.com/alerts/feeds/16653873032599811621/11871034927027159450",
       "filter": "titel", "alleen_vacatures": "titel", "taal_bij_google": "Alle talen"
     },
     {
@@ -148,7 +148,7 @@
     {
       "naam": "Google Alert: uitgeverijen",
       "google_zoekopdracht": "vacature uitgeverij redacteur OR bureauredacteur OR redactieassistent OR \"junior editor\"",
-      "url": "PLAK_HIER_DE_RSS_LINK",
+      "url": "https://www.google.com/alerts/feeds/16653873032599811621/8288500775593961986",
       "filter": "titel", "alleen_vacatures": "titel"
     },
     {
@@ -160,25 +160,19 @@
     {
       "naam": "Google Alert: educatieve uitgevers",
       "google_zoekopdracht": "vacature Noordhoff OR Malmberg OR ThiemeMeulenhoff redacteur OR \"educatief auteur\" OR ontwikkelaar",
-      "url": "PLAK_HIER_DE_RSS_LINK",
+      "url": "https://www.google.com/alerts/feeds/16653873032599811621/16443183025942192739",
       "filter": "titel", "alleen_vacatures": "titel"
     },
     {
       "naam": "Google Alert: taal",
       "google_zoekopdracht": "vacature \"Onze Taal\" OR \"Instituut voor de Nederlandse Taal\" OR Taalunie OR lexicograaf OR taaladviseur",
-      "url": "PLAK_HIER_DE_RSS_LINK",
-      "filter": "titel", "alleen_vacatures": "titel"
-    },
-    {
-      "naam": "Google Alert: indexeren & metadata",
-      "google_zoekopdracht": "vacature indexeerder OR metadataspecialist OR catalogiseerder OR documentalist OR informatiespecialist",
-      "url": "PLAK_HIER_DE_RSS_LINK",
+      "url": "https://www.google.com/alerts/feeds/16653873032599811621/5084917739006145488",
       "filter": "titel", "alleen_vacatures": "titel"
     },
     {
       "naam": "Google Alert: erfgoed- & kennisinstituten",
       "google_zoekopdracht": "vacature \"Huygens Instituut\" OR \"Meertens Instituut\" OR \"Beeld en Geluid\" OR \"Koninklijke Bibliotheek\"",
-      "url": "PLAK_HIER_DE_RSS_LINK",
+      "url": "https://www.google.com/alerts/feeds/16653873032599811621/3324323935514367720",
       "filter": "titel", "alleen_vacatures": "titel"
     },
     {
@@ -190,19 +184,19 @@
     {
       "naam": "Google Alert: gedrag & gedragsverandering",
       "google_zoekopdracht": "vacature gedragsexpert OR gedragsinzichten OR \"behavioural insights\" OR \"adviseur gedragsverandering\"",
-      "url": "PLAK_HIER_DE_RSS_LINK",
+      "url": "https://www.google.com/alerts/feeds/16653873032599811621/2490880387532153376",
       "filter": "titel", "alleen_vacatures": "titel"
     },
     {
       "naam": "Google Alert: leren & teamontwikkeling",
       "google_zoekopdracht": "vacature opleidingsadviseur OR leerconsultant OR \"L&D specialist\" OR teamcoach OR \"trainer teamontwikkeling\"",
-      "url": "PLAK_HIER_DE_RSS_LINK",
+      "url": "https://www.google.com/alerts/feeds/16653873032599811621/6374531814171584529",
       "filter": "titel", "alleen_vacatures": "titel"
     },
     {
       "naam": "Google Alert: tijdschriften persoonlijke groei",
       "google_zoekopdracht": "vacature Happinez OR \"Psychologie Magazine\" OR \"Flow magazine\" redacteur OR redactie OR content",
-      "url": "PLAK_HIER_DE_RSS_LINK",
+      "url": "https://www.google.com/alerts/feeds/16653873032599811621/5362342622172449549",
       "filter": "titel", "alleen_vacatures": "titel"
     },
     {
