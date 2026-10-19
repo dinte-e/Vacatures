@@ -2,32 +2,32 @@
   "_uitleg": "Zie LEESMIJ.md. Plak bij elke Google Alert onder 'feeds' alleen de link tussen de aanhalingstekens, bijv. \"url\": \"https://www.google.com/alerts/feeds/123/456\". Zoektermen tellen als heel woord; hoofdletters en accenten maken niet uit. Een * aan het eind betekent 'begint met' (educati* vindt ook educatief), een * aan het begin 'eindigt met' (*stagiair vindt ook redactiestagiair). Google Alerts gebruiken nu ook de zoektermen: de titel moet een passend functiewoord én een woord als 'vacature' of 'zoekt' bevatten, anders valt hij af.",
 
   "zoektermen": {
-    "Educatie & onderwijs": ["*educati*", "educator", "museumdocent", "onderwijs*", "zij-instro*", "lesmateriaal", "mediawijs*", "*mediaconsulent", "leesconsulent", "e-learning", "learning", "opleidingsontwikkel*", "trainer", "studiebegeleid*", "studieloopbaan*", "cultuurorganisator", "studieadviseur", "studentadviseur", "student advisor", "tutor", "mentor*", "*mediacoach", "cultuuronderwijs"],
-    "Journalistiek & content": ["redacteur", "eindredacteur", "redactie*", "*journalist*", "correspondent*", "verslaggever", "content*", "copywriter", "tekstschrijver", "podcast*", "storytell*", "*journalism*", "persvrijheid", "press freedom", "eindredactie", "programmamaker", "radio*", "audiomaker", "debat*"],
-    "Welzijn & persoonlijke ontwikkeling": ["*welzijn*", "wellbeing", "well-being", "vitaliteit*", "yoga*", "mindfulness", "coach*", "zingeving", "spiritu*", "levensbeschouw*", "meditatie", "retreat*", "ademwerk", "hapto*", "lichaamsgericht*", "lichaamswerk", "veerkracht*", "duurzame inzetbaarheid", "systemisch*"],
-    "Maatschappelijk & impact": ["programmamedewerker", "projectmedewerker", "programmacoordinator", "projectcoordinator", "impact*", "community*", "adviseur", "beleidsmedewerker", "trainee*", "publieksbegeleid*", "erfgoed*", "collectie*", "basisvaardigheden", "laaggeletterd*", "participatie*", "democrati*", "burgerschap*", "*geletterdheid", "project coordinator", "programme coordinator", "program coordinator", "publiekseducatie", "publieksprogramm*", "publieksparticipatie"],
+    "Educatie & onderwijs": ["*educati*", "educator", "museumdocent", "onderwijs*", "zij-instro*", "lesmateriaal", "mediawijs*", "*mediaconsulent", "leesconsulent", "e-learning", "learning", "opleidingsontwikkel*", "trainer", "studiebegeleid*", "studieloopbaan*", "cultuurorganisator", "studieadviseur", "studentadviseur", "student advisor", "tutor", "mentor*", "*mediacoach", "cultuuronderwijs", "natuureducati*", "buitenle*", "ervaringsgericht*", "cultuurcoach", "combinatiefunctionaris cultuur", "combinatiefunctionaris kunst*", "talentontwikkeling", "jongerencultuur", "jongerenprogramm*", "jongerenproject*"],
+    "Journalistiek & content": ["redacteur", "eindredacteur", "redactie*", "*journalist*", "correspondent*", "verslaggever", "content*", "copywriter", "tekstschrijver", "podcast*", "storytell*", "*journalism*", "persvrijheid", "press freedom", "eindredactie", "programmamaker", "radio*", "audiomaker", "debat*", "festivalprogramm*", "festivalcoordinator", "programmeur literatuur", "programmeur debat"],
+    "Welzijn & persoonlijke ontwikkeling": ["*welzijn*", "wellbeing", "well-being", "vitaliteit*", "yoga*", "mindfulness", "coach*", "zingeving", "spiritu*", "levensbeschouw*", "meditatie", "retreat*", "ademwerk", "hapto*", "lichaamsgericht*", "lichaamswerk", "veerkracht*", "duurzame inzetbaarheid", "systemisch*", "retraite*", "bezinning*", "stiltecentrum", "kloostergasthuis", "natuurcoach*"],
+    "Maatschappelijk & impact": ["programmamedewerker", "projectmedewerker", "programmacoordinator", "projectcoordinator", "impact*", "community*", "adviseur", "beleidsmedewerker", "trainee*", "publieksbegeleid*", "erfgoed*", "collectie*", "basisvaardigheden", "laaggeletterd*", "participatie*", "democrati*", "burgerschap*", "*geletterdheid", "project coordinator", "programme coordinator", "program coordinator", "publiekseducatie", "publieksprogramm*", "publieksparticipatie", "jongerenparticipatie", "jeugdparticipatie"],
     "Onderzoek & kennis": ["*onderzoeker", "onderzoeks*", "researcher", "research*", "kennismedewerker", "kennisadviseur", "kennisontwikkel*"],
     "Internationaal & Europees": ["internationalisering*", "international office", "erasmus*", "europe*", "eu-project*"],
     "Diversiteit, inclusie & gender": ["diversiteit*", "diversity", "inclusie*", "inclusiviteit", "inclusion", "gender*", "gelijke kansen", "emancipatie*", "gelijkwaardigheid"],
-    "Boeken & taal": ["uitgever*", "boeken*", "boekhandel*", "litera*", "lees*", "bureauredacteur", "editor", "corrector", "taal*", "lexicogra*", "vertal*", "schrijf*", "poezie", "spoken word"],
+    "Boeken & taal": ["uitgever*", "boeken*", "boekhandel*", "litera*", "lees*", "bureauredacteur", "editor", "corrector", "taal*", "lexicogra*", "vertal*", "schrijf*", "poezie", "spoken word", "dichter*"],
     "Ontsluiten & metadata": ["index*", "metadata*", "catalogise*", "documentalist", "informatiespecialist", "archief*", "archivaris", "digitalisering*"],
-    "Gedrag & leren": ["gedrag*", "behavioural", "behavioral", "opleidings*", "leerconsultant", "l&d", "teamcoach", "teamontwikkel*", "facilitator", "procesbegeleid*"],
-    "Passende organisatie": ["Atria", "Rutgers", "Movisie", "Verwey-Jonker", "Kennisplatform Inclusief Samenleven", "Rathenau*", "Waag", "ProDemos", "Bits of Freedom", "Free Press Unlimited", "European Journalism Centre", "Are We Europe", "Nuffic", "VPRO", "NTR", "NPO", "Nooit Meer Slapen", "Letterenfonds", "Stichting Lezen", "CPNB", "Literatuurmuseum", "Writers Unlimited", "Onze Taal", "Taalunie", "Instituut voor de Nederlandse Taal", "Huygens*", "Meertens*", "Beeld en Geluid", "Koninklijke Bibliotheek", "Pakhuis de Zwijger", "De Balie", "Spui25", "Studium Generale", "Happinez", "Psychologie Magazine", "Noordhoff", "Malmberg", "ThiemeMeulenhoff", "IMC Weekendschool", "Weekendschool", "De Correspondent", "Follow the Money", "Investico", "OneWorld", "Lezen & Schrijven", "Lezen en Schrijven", "Kennisnet", "Anne Frank Stichting", "Anne Frank Huis", "Schouten & Nelissen", "Schouten en Nelissen", "Rijksmuseum", "Nieuwe Instituut", "Eye Filmmuseum", "IHLIA", "COC", "Women Inc", "Oxfam", "Amnesty", "College voor de Rechten van de Mens", "NIMD", "Trimbos*", "MIND Us", "MIND Korrelatie", "LTC Training", "NextSteps*", "Mind the Body", "Ynnergy", "BuroVitaal", "De Baak", "Kessels & Smit", "Kessels en Smit", "Phoenix Opleidingen", "Academie voor Haptonomie", "Saswitha", "Centrum voor Mindfulness", "OpenUp"]
+    "Gedrag & leren": ["gedrag*", "behavioural", "behavioral", "opleidings*", "leerconsultant", "l&d", "teamcoach", "teamontwikkel*", "facilitator", "procesbegeleid*", "gespreksleider", "dialoog*", "workshop*"],
+    "Passende organisatie": ["Atria", "Rutgers", "Movisie", "Verwey-Jonker", "Kennisplatform Inclusief Samenleven", "Rathenau*", "Waag", "ProDemos", "Bits of Freedom", "Free Press Unlimited", "European Journalism Centre", "Are We Europe", "Nuffic", "VPRO", "NTR", "NPO", "Nooit Meer Slapen", "Letterenfonds", "Stichting Lezen", "CPNB", "Literatuurmuseum", "Writers Unlimited", "Onze Taal", "Taalunie", "Instituut voor de Nederlandse Taal", "Huygens*", "Meertens*", "Beeld en Geluid", "Koninklijke Bibliotheek", "Pakhuis de Zwijger", "De Balie", "Spui25", "Studium Generale", "Happinez", "Psychologie Magazine", "Noordhoff", "Malmberg", "ThiemeMeulenhoff", "IMC Weekendschool", "Weekendschool", "De Correspondent", "Follow the Money", "Investico", "OneWorld", "Lezen & Schrijven", "Lezen en Schrijven", "Kennisnet", "Anne Frank Stichting", "Anne Frank Huis", "Schouten & Nelissen", "Schouten en Nelissen", "Rijksmuseum", "Nieuwe Instituut", "Eye Filmmuseum", "IHLIA", "COC", "Women Inc", "Oxfam", "Amnesty", "College voor de Rechten van de Mens", "NIMD", "Trimbos*", "MIND Us", "MIND Korrelatie", "LTC Training", "NextSteps*", "Mind the Body", "Ynnergy", "BuroVitaal", "De Baak", "Kessels & Smit", "Kessels en Smit", "Phoenix Opleidingen", "Academie voor Haptonomie", "Saswitha", "Centrum voor Mindfulness", "OpenUp", "IVN", "NOORDWOORD", "SLAA", "VLAM21", "Dichters in de Prinsentuin", "Save the Children", "Cultuur Oost", "Kunstbende", "Nationale Jeugdraad"]
   },
 
   "uitsluiten_als_in_titel": [
     "senior", "directeur", "teamleider", "hoofd", "hoofdredacteur", "bestuurslid", "raad van toezicht", "voorzitter", "penningmeester",
-    "*stage", "*stages", "*stagiair*", "*stagiar*", "intern", "internship", "vrijwilliger", "onbetaald", "vakantiewerk", "bijbaan", "invalkracht", "solopreneur",
+    "*stage", "*stages", "*stagiair*", "*stagiar*", "intern", "internship", "vrijwilliger", "onbetaald", "vakantiewerk", "bijbaan", "invalkracht", "solopreneur", "escape*", "entertainer",
     "docent wiskunde", "docent natuurkunde", "docent scheikunde", "docent biologie", "docent economie", "docent frans", "docent duits", "docent engels", "docent spaans", "docent nederlands", "docent nt2", "docent geschiedenis", "docent aardrijkskunde", "docent lichamelijke opvoeding", "physical education", "1e graads", "2e graads", "eerstegraads", "tweedegraads", "leerkracht", "leraar", "lyceum", "*mavo",
     "hr", "human resources", "recruit*", "p&o", "personeelszaken", "personeelsadviseur", "salaris*", "talent acquisition",
     "*controller", "controlling", "financ*", "*boekhoud*", "accountant", "administrateur", "*administratie", "crediteur*", "debiteur*", "asset*", "treasur*", "fiscal*",
-    "beveilig*", "security", "bewaker", "receptie*", "receptionist*", "facilitair*", "facility", "huismeester", "concierge", "gebouwbeheer*", "schoonmaak*", "schoonmaker", "horeca*", "barmedewerker", "bediening", "kok", "keuken*", "gastvrijheid*", "gastheer", "gastvrouw", "kassa*", "suppoost", "zaalwacht*", "museumwacht*", "chef", "restaurant*", "bar", "front office", "housekeeping", "banquet*", "reservering*", "technische dienst", "algemene dienst", "oproepkracht", "medewerker verzorging",
+    "beveilig*", "security", "bewaker", "receptie*", "receptionist*", "facilitair*", "facility", "huismeester", "concierge", "gebouwbeheer*", "schoonmaak*", "schoonmaker", "horeca*", "barmedewerker", "bediening", "kok", "keuken*", "gastvrijheid*", "gastheer", "gastvrouw", "kassa*", "suppoost", "zaalwacht*", "museumwacht*", "chef", "restaurant*", "bar", "front office", "housekeeping", "banquet*", "reservering*", "technische dienst", "algemene dienst", "oproepkracht", "medewerker verzorging", "escaperoom*", "escape room", "entertainer", "activiteitenbegeleider",
     "engineer", "monteur", "*technicus", "podiumtechni*", "*restaurator", "ict*", "it-*", "developer", "software*", "systeembeheer*", "servicedesk", "elektricien", "tpm",
     "jurist", "juridisch*", "advocaat", "inkoop*", "inkoper", "magazijn*", "logistiek*", "chauffeur",
-    "doktersassistent*", "verpleegkundige", "*psycholoog", "accountmanager", "sales", "managementassistent*", "*secretaresse", "Rutgers University"
+    "doktersassistent*", "verpleegkundige", "*psycholoog", "accountmanager", "sales", "managementassistent*", "*secretaresse", "Rutgers University", "activiteitenbegeleider", "pedagogisch medewerker", "vaktherapeut", "psychomotorisch*", "pmt", "bewegingsagoog", "*fysiotherapeut"
   ],
 
-  "uitsluiten_als_in_tekst": ["vacature voor een vrijwillige functie", "vacature voor een nevenfunctie", "vacature voor een leertraject", "onbezoldigd"],
+  "uitsluiten_als_in_tekst": ["vacature voor een vrijwillige functie", "vacature voor een nevenfunctie", "vacature voor een leertraject", "onbezoldigd", "op vrijwillige basis", "vrijwilligersfunctie", "vrijwilligersvacature", "vrijwillige functie"],
 
   "voorkeursplaatsen": [],
 
@@ -273,6 +273,48 @@
       "naam": "Google Alert: mindfulness & vitaliteit",
       "google_zoekopdracht": "vacature \"Centrum voor Mindfulness\" OR mindfulnesstrainer OR vitaliteitscoach OR \"trainer duurzame inzetbaarheid\"",
       "url": "https://www.google.com/alerts/feeds/16653873032599811621/15006218051670407792",
+      "filter": "titel", "alleen_vacatures": "titel"
+    },
+    {
+      "naam": "Google Alert: retraite- & bezinningscentra",
+      "google_zoekopdracht": "vacature retraitecentrum OR retraite OR bezinningscentrum OR kloostergasthuis OR stiltecentrum",
+      "url": "https://www.google.com/alerts/feeds/16653873032599811621/8124288472060564386",
+      "filter": "titel", "alleen_vacatures": "titel"
+    },
+    {
+      "naam": "Google Alert: gespreksleiding & dialoog",
+      "google_zoekopdracht": "vacature gespreksleider OR dialoogbegeleider OR workshopbegeleider OR workshopleider",
+      "url": "https://www.google.com/alerts/feeds/16653873032599811621/16576159224416215363",
+      "filter": "titel", "alleen_vacatures": "titel"
+    },
+    {
+      "naam": "Google Alert: yogatherapie in de zorg",
+      "google_zoekopdracht": "vacature yogatherapeut OR \"yoga therapeut\" OR \"yoga in de zorg\" OR \"lichaamsgerichte therapie\"",
+      "url": "https://www.google.com/alerts/feeds/16653873032599811621/13786183926964015697",
+      "filter": "titel", "alleen_vacatures": "titel"
+    },
+    {
+      "naam": "Google Alert: jongerenprogramma's",
+      "google_zoekopdracht": "vacature jongerenprogramma OR \"projectmedewerker jongeren\" OR jongerenparticipatie OR jeugdparticipatie",
+      "url": "https://www.google.com/alerts/feeds/16653873032599811621/3212689396338721105",
+      "filter": "titel", "alleen_vacatures": "titel"
+    },
+    {
+      "naam": "Google Alert: programmamaker literatuur & festivals",
+      "google_zoekopdracht": "vacature programmamaker OR programmeur literatuur OR poëzie OR festival OR lezingen",
+      "url": "https://www.google.com/alerts/feeds/16653873032599811621/10347128962715532323",
+      "filter": "titel", "alleen_vacatures": "titel"
+    },
+    {
+      "naam": "Google Alert: natuur & ervaringsgericht leren",
+      "google_zoekopdracht": "vacature natuurcoach OR natuureducatie OR buitenleren OR \"ervaringsgericht leren\"",
+      "url": "https://www.google.com/alerts/feeds/16653873032599811621/14245991960967607892",
+      "filter": "titel", "alleen_vacatures": "titel"
+    },
+    {
+      "naam": "Google Alert: cultuureducatie & talentontwikkeling",
+      "google_zoekopdracht": "vacature cultuurcoach OR \"combinatiefunctionaris cultuur\" OR \"talentontwikkeling jongeren\" OR jongerencultuur",
+      "url": "https://www.google.com/alerts/feeds/16653873032599811621/1360922226115412092",
       "filter": "titel", "alleen_vacatures": "titel"
     }
   ]

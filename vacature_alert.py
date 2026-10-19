@@ -175,6 +175,15 @@ def patroon(term):
                       + ("" if vrij_eind else r"(?!\w)"), re.IGNORECASE)
 
 
+def url_woorden(link):
+    """Maakt van een link losse woorden, zodat bijv. .../job/... of .../vacature/... herkend wordt."""
+    try:
+        deel = urllib.parse.urlparse(link or "")
+    except ValueError:
+        return ""
+    return re.sub(r"[^0-9A-Za-z]+", " ", f"{deel.netloc} {deel.path}")
+
+
 def gevonden(tekst, termen):
     tekst = ontaccent(tekst)
     return [t for t in termen if patroon(t).search(tekst)]
@@ -187,6 +196,10 @@ class Filter:
         self.plaatsen = cfg.get("voorkeursplaatsen", [])
         self.signaalwoorden = cfg.get("vacature_signaalwoorden", [])
         self.uitsluiten_tekst = cfg.get("uitsluiten_als_in_tekst", [])
+        # Vacaturepagina's herkennen aan hun webadres (bijv. oneworld.nl/job/...),
+        # ook als in de titel geen woord als 'vacature' staat.
+        self.url_kenmerken = [k.lower() for k in cfg.get("vacature_url_kenmerken", [
+            "/job/", "/jobs/", "/vacature", "/vacancy", "/vacancies", "werkenbij", "werken-bij", "/careers"])]
 
     def beoordeel(self, item, feed):
         """Geeft (past, labels) terug."""
@@ -198,8 +211,11 @@ class Filter:
         if signaal:
             # "titel": het woord vacature (of zoekt, gezocht, ...) moet in de titel staan.
             # Zo vallen nieuwsberichten af die alleen in hun menu een link 'Vacatures' hebben.
-            waar = titel if signaal == "titel" else alles
-            if not gevonden(waar, self.signaalwoorden):
+            # De link telt mee: veel vacaturesites zetten /job/ of /vacature/ in het adres,
+            # ook als de titel zelf geen woord als "vacature" bevat.
+            waar = f"{titel if signaal == 'titel' else alles} {url_woorden(item.get('link'))}"
+            link = (item.get("link") or "").lower()
+            if not gevonden(waar, self.signaalwoorden) and not any(k in link for k in self.url_kenmerken):
                 return False, []  # waarschijnlijk een nieuwsbericht, geen vacature
         modus = feed.get("filter", "titel")
         if modus == "geen":
