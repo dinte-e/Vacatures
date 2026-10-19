@@ -31,7 +31,7 @@
 
   "voorkeursplaatsen": [],
 
-  "vacature_signaalwoorden": ["vacature*", "vacancy", "vacancies", "solliciteer*", "sollicitatie*", "gezocht", "zoekt", "zoeken een", "werken bij", "job", "jobs", "functie", "traineeship", "traineeprogramma", "aanmelden", "apply", "hiring", "position", "join our team", "we are looking", "werkzoeken", "meesterbaan", "nationale vacaturebank", "indeed", "linkedin", "academictransfer", "werken voor nederland", "intermediair", "yogavacatures"],
+  "vacature_signaalwoorden": ["vacature*", "vacancy", "vacancies", "solliciteer*", "sollicitatie*", "gezocht", "zoekt", "zoeken een", "werken bij", "job", "jobs", "functie", "traineeship", "traineeprogramma", "aanmelden", "apply", "hiring", "position", "join our team", "we are looking", "werkzoeken", "meesterbaan", "nationale vacaturebank", "indeed", "linkedin", "academictransfer", "werken voor nederland", "intermediair", "yogavacatures", "x/m/v", "m/v/x", "v/m/x", "x/v/m", "m/x/v", "v/x/m", "m/v", "v/m", "m/f/x", "f/m/x", "m/f", "fte", "uur per week", "uren per week"],
 
   "google_alerts": {"bestand": "google_alerts.txt", "filter": "titel", "alleen_vacatures": "titel"},
 
