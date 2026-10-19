@@ -2,9 +2,9 @@
 """
 Vacature-alert
 ==============
-Controleert RSS/Atom-feeds (Google Alerts en vacaturesites) op nieuwe vacatures
-die passen bij de zoektermen in config.json, en stuurt daarvan een melding per
-e-mail en/of Telegram. Al gemelde vacatures worden onthouden in gezien.json,
+Controleert RSS/Atom-feeds (Google Alerts uit google_alerts.txt en vacaturesites
+uit config.json) op nieuwe vacatures die passen bij de zoektermen in config.json,
+en stuurt daarvan een melding per e-mail en/of Telegram. Al gemelde vacatures worden onthouden in gezien.json,
 zodat je elke vacature maar een keer krijgt.
 
 Alleen standaard-Python nodig (3.9 of nieuwer), geen extra pakketten.
@@ -41,6 +41,7 @@ ATOM = "{http://www.w3.org/2005/Atom}"
 USER_AGENT = "Mozilla/5.0 (compatible; vacature-alert/1.0; persoonlijk gebruik)"
 BEWAAR_DAGEN = 180      # zo lang onthouden we een gemelde vacature
 MAX_PER_MELDING = 60    # meer dan dit per bericht wordt onleesbaar
+GOOGLE_FEED = re.compile(r"https?://www\.google\.[a-z.]+/alerts/feeds/\d+/\d+")
 
 
 # --------------------------------------------------------------------------
@@ -127,9 +128,11 @@ def maak_item(id_, titel, link, samenvatting, datum):
 
 
 def lees_feed(data):
+    """Geeft (titel van de feed, lijst met items) terug."""
     wortel = ET.fromstring(data)
     items = []
     if wortel.tag.rsplit("}", 1)[-1] == "feed":  # Atom, o.a. Google Alerts
+        feedtitel = zonder_html(wortel.findtext(ATOM + "title"))
         for e in wortel.findall(ATOM + "entry"):
             link = ""
             for l in e.findall(ATOM + "link"):
@@ -142,12 +145,14 @@ def lees_feed(data):
                 e.findtext(ATOM + "published") or e.findtext(ATOM + "updated"),
             ))
     else:  # RSS 2.0, o.a. WordPress-vacaturesites
+        kanaal = wortel.find("channel")
+        feedtitel = zonder_html(kanaal.findtext("title")) if kanaal is not None else ""
         for it in wortel.iter("item"):
             items.append(maak_item(
                 it.findtext("guid"), it.findtext("title"), it.findtext("link"),
                 it.findtext("description"), it.findtext("pubDate"),
             ))
-    return items
+    return feedtitel, items
 
 
 # --------------------------------------------------------------------------
@@ -161,12 +166,13 @@ def ontaccent(tekst):
 
 @functools.lru_cache(maxsize=None)
 def patroon(term):
-    """Zoekterm als heel woord; een * aan het eind betekent 'begint met'."""
+    """Zoekterm als heel woord. Een * aan het eind betekent 'begint met',
+    een * aan het begin 'eindigt met' (*stagiair vindt ook redactiestagiair)."""
     term = ontaccent(term.strip().lower())
-    begint_met = term.endswith("*")
-    woorden = [re.escape(w) for w in term.rstrip("*").split()]
-    return re.compile(r"(?<!\w)" + r"\s+".join(woorden) + ("" if begint_met else r"(?!\w)"),
-                      re.IGNORECASE)
+    vrij_begin, vrij_eind = term.startswith("*"), term.endswith("*")
+    woorden = [re.escape(w) for w in term.strip("*").split()]
+    return re.compile(("" if vrij_begin else r"(?<!\w)") + r"\s+".join(woorden)
+                      + ("" if vrij_eind else r"(?!\w)"), re.IGNORECASE)
 
 
 def gevonden(tekst, termen):
@@ -180,18 +186,24 @@ class Filter:
         self.uitsluiten = cfg.get("uitsluiten_als_in_titel", [])
         self.plaatsen = cfg.get("voorkeursplaatsen", [])
         self.signaalwoorden = cfg.get("vacature_signaalwoorden", [])
+        self.uitsluiten_tekst = cfg.get("uitsluiten_als_in_tekst", [])
 
     def beoordeel(self, item, feed):
         """Geeft (past, labels) terug."""
         titel = item["titel"]
         alles = f"{titel} {item['samenvatting']}"
-        if gevonden(titel, self.uitsluiten):
+        if gevonden(titel, self.uitsluiten) or gevonden(alles, self.uitsluiten_tekst):
             return False, []
-        if feed.get("alleen_vacatures") and not gevonden(alles, self.signaalwoorden):
-            return False, []  # waarschijnlijk een nieuwsbericht, geen vacature
+        signaal = feed.get("alleen_vacatures")
+        if signaal:
+            # "titel": het woord vacature (of zoekt, gezocht, ...) moet in de titel staan.
+            # Zo vallen nieuwsberichten af die alleen in hun menu een link 'Vacatures' hebben.
+            waar = titel if signaal == "titel" else alles
+            if not gevonden(waar, self.signaalwoorden):
+                return False, []  # waarschijnlijk een nieuwsbericht, geen vacature
         modus = feed.get("filter", "titel")
         if modus == "geen":
-            label = feed.get("label") or re.sub(r"^google alert:\s*", "", feed.get("naam", ""), flags=re.I)
+            label = feed.get("label") or re.sub(r"^google alert:\s*", "", feed.get("naam") or "", flags=re.I)
             return True, [label]
         tekst = titel if modus == "titel" else alles
         labels = [cat for cat, termen in self.categorieen.items() if gevonden(tekst, termen)]
@@ -214,9 +226,65 @@ def item_sleutels(item):
     return sleutels
 
 
+def lees_google_alerts(cfg, map_):
+    """Zoekt alle Google Alerts-feedlinks in google_alerts.txt. Je mag er alles in
+    plakken (ook de hele inhoud van de feedpagina); regels met # worden overgeslagen."""
+    instellingen = cfg.get("google_alerts", {})
+    pad = Path(instellingen.get("bestand", "google_alerts.txt"))
+    if not pad.is_absolute():
+        pad = map_ / pad
+    if not pad.exists():
+        return []
+    urls = []
+    for regel in pad.read_text(encoding="utf-8").splitlines():
+        if regel.strip().startswith("#"):
+            continue
+        for url in GOOGLE_FEED.findall(regel):
+            if url not in urls:
+                urls.append(url)
+    return [{"url": u, "google": True, "filter": instellingen.get("filter", "geen"),
+             "alleen_vacatures": instellingen.get("alleen_vacatures", True)} for u in urls]
+
+
+def kort_label(zoekopdracht):
+    """'vacature "a b" OR c' -> 'a b, c'"""
+    tekst = re.sub(r"\bvacature\b", "", zoekopdracht, flags=re.I).replace('"', "")
+    tekst = re.sub(r"\s+OR\s+", ", ", tekst)
+    return kort(re.sub(r"\s+", " ", tekst).strip(" ,"), 70)
+
+
+def feed_naam(feed, feedtitel="", url=""):
+    if feed.get("naam"):
+        return feed["naam"]
+    if feed.get("google"):
+        zoek = re.sub(r"^google alert\s*-\s*", "", feedtitel or "", flags=re.I).strip()
+        return f"Google Alert: {kort_label(zoek)}" if zoek else f"Google Alert (...{url[-6:]})"
+    return feedtitel or url
+
+
+def haal_feed(feed, url):
+    """Haalt een feed op, bij "paginas": N ook pagina 2..N (WordPress: ?paged=2).
+    Veel sites tonen maar 10 berichten per feed; met meer pagina's mis je niets
+    op drukke dagen."""
+    feedtitel, items = lees_feed(haal_op(url))
+    for pagina in range(2, int(feed.get("paginas", 1)) + 1):
+        scheiding = "&" if "?" in url else "?"
+        try:
+            _, extra = lees_feed(haal_op(f"{url}{scheiding}paged={pagina}"))
+        except Exception:
+            break  # pagina bestaat niet (meer): klaar
+        if not extra:
+            break
+        items += extra
+    return feedtitel, items
+
+
 def actieve_feeds(cfg):
-    for feed in cfg.get("feeds", []):
+    for feed in cfg.get("_alle_feeds", cfg.get("feeds", [])):
         url = (feed.get("url") or "").strip()
+        if url.startswith("<"):  # hele feedpagina geplakt i.p.v. de link
+            gevonden_url = GOOGLE_FEED.search(url)
+            url = gevonden_url.group(0) if gevonden_url else ""
         ingesteld = url and not url.upper().startswith("PLAK")
         yield feed, url, bool(ingesteld and feed.get("actief", True))
 
@@ -228,12 +296,13 @@ def verzamel(cfg, filt, gezien):
         if not aan:
             continue
         actief += 1
-        naam = feed.get("naam") or url
         try:
-            items = lees_feed(haal_op(url))
+            feedtitel, items = haal_feed(feed, url)
         except Exception as fout:  # elke fout melden en doorgaan met de rest
-            fouten.append(f"{naam}: {fout}")
+            fouten.append(f"{feed_naam(feed, '', url)}: {fout}")
             continue
+        naam = feed_naam(feed, feedtitel, url)
+        feed = {**feed, "naam": naam}
         for item in items:
             past, labels = filt.beoordeel(item, feed)
             if not past:
@@ -383,15 +452,16 @@ def meld(vacatures, fouten):
 
 def test_feeds(cfg, filt):
     for feed, url, aan in actieve_feeds(cfg):
-        naam = feed.get("naam") or url
         if not aan:
-            print(f"[nog niet ingesteld] {naam}")
+            print(f"[uit of nog niet ingesteld] {feed_naam(feed, '', url)}")
             continue
         try:
-            items = lees_feed(haal_op(url))
+            feedtitel, items = haal_feed(feed, url)
         except Exception as fout:
-            print(f"[FOUT] {naam}: {fout}")
+            print(f"[FOUT] {feed_naam(feed, '', url)}: {fout}")
             continue
+        naam = feed_naam(feed, feedtitel, url)
+        feed = {**feed, "naam": naam}
         passend = [i for i in items if filt.beoordeel(i, feed)[0]]
         print(f"[OK] {naam}: {len(items)} items, waarvan {len(passend)} passend")
         for i in passend[:5]:
@@ -428,7 +498,19 @@ def main(argv=None):
     if not config_pad.exists():
         print(f"config.json niet gevonden op {config_pad}", file=sys.stderr)
         return 1
-    cfg = laad_json(config_pad, {})
+    try:
+        cfg = laad_json(config_pad, {})
+    except json.JSONDecodeError as fout:
+        regels = config_pad.read_text(encoding="utf-8").splitlines()
+        regel = regels[fout.lineno - 1] if 0 < fout.lineno <= len(regels) else ""
+        print(f"config.json bevat een typfout op regel {fout.lineno}, teken {fout.colno}:\n\n"
+              f"  {regel}\n  {' ' * (fout.colno - 1)}^\n\n"
+              "Meestal is dit een aanhalingsteken te veel of te weinig, een ontbrekende komma,\n"
+              "of krullende aanhalingstekens (“ ”) in plaats van rechte (\").\n"
+              "Let op: Google Alerts-links horen in google_alerts.txt, niet in config.json.",
+              file=sys.stderr)
+        return 1
+    cfg["_alle_feeds"] = cfg.get("feeds", []) + lees_google_alerts(cfg, config_pad.parent)
     filt = Filter(cfg)
 
     if args.test_melding:
@@ -445,7 +527,7 @@ def main(argv=None):
     for f in fouten:
         print(f"  Feed werkte niet: {f}", file=sys.stderr)
     if actief == 0:
-        print("Nog geen feeds ingesteld. Plak eerst je Google Alerts-links in config.json.", file=sys.stderr)
+        print("Nog geen feeds ingesteld. Plak eerst je Google Alerts-links in google_alerts.txt.", file=sys.stderr)
 
     if args.droog:
         for v in nieuw:
