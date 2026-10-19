@@ -12,7 +12,7 @@
     "Boeken & taal": ["uitgever*", "boeken*", "boekhandel*", "litera*", "lees*", "bureauredacteur", "editor", "corrector", "taal*", "lexicogra*", "vertal*", "schrijf*", "poezie", "spoken word"],
     "Ontsluiten & metadata": ["index*", "metadata*", "catalogise*", "documentalist", "informatiespecialist", "archief*", "archivaris", "digitalisering*"],
     "Gedrag & leren": ["gedrag*", "behavioural", "behavioral", "opleidings*", "leerconsultant", "l&d", "teamcoach", "teamontwikkel*", "facilitator", "procesbegeleid*"],
-    "Passende organisatie": ["Atria", "Rutgers", "Movisie", "Verwey-Jonker", "Kennisplatform Inclusief Samenleven", "Rathenau*", "Waag", "ProDemos", "Bits of Freedom", "Free Press Unlimited", "European Journalism Centre", "Are We Europe", "Nuffic", "VPRO", "NTR", "NPO", "Nooit Meer Slapen", "Letterenfonds", "Stichting Lezen", "CPNB", "Literatuurmuseum", "Writers Unlimited", "Onze Taal", "Taalunie", "Instituut voor de Nederlandse Taal", "Huygens*", "Meertens*", "Beeld en Geluid", "Koninklijke Bibliotheek", "Pakhuis de Zwijger", "De Balie", "Spui25", "Studium Generale", "Happinez", "Psychologie Magazine", "Noordhoff", "Malmberg", "ThiemeMeulenhoff", "IMC Weekendschool", "Weekendschool"]
+    "Passende organisatie": ["Atria", "Rutgers", "Movisie", "Verwey-Jonker", "Kennisplatform Inclusief Samenleven", "Rathenau*", "Waag", "ProDemos", "Bits of Freedom", "Free Press Unlimited", "European Journalism Centre", "Are We Europe", "Nuffic", "VPRO", "NTR", "NPO", "Nooit Meer Slapen", "Letterenfonds", "Stichting Lezen", "CPNB", "Literatuurmuseum", "Writers Unlimited", "Onze Taal", "Taalunie", "Instituut voor de Nederlandse Taal", "Huygens*", "Meertens*", "Beeld en Geluid", "Koninklijke Bibliotheek", "Pakhuis de Zwijger", "De Balie", "Spui25", "Studium Generale", "Happinez", "Psychologie Magazine", "Noordhoff", "Malmberg", "ThiemeMeulenhoff", "IMC Weekendschool", "Weekendschool", "De Correspondent", "Follow the Money", "Investico", "OneWorld", "Lezen & Schrijven", "Lezen en Schrijven", "Kennisnet", "Anne Frank Stichting", "Anne Frank Huis", "Schouten & Nelissen", "Schouten en Nelissen", "Rijksmuseum", "Nieuwe Instituut", "Eye Filmmuseum", "IHLIA", "COC", "Women Inc", "Oxfam", "Amnesty", "College voor de Rechten van de Mens", "NIMD", "Trimbos*", "MIND Us", "MIND Korrelatie"]
   },
 
   "uitsluiten_als_in_titel": ["senior", "*stage", "*stages", "*stagiair*", "intern", "internship", "vrijwilliger", "onbetaald", "directeur", "teamleider", "hoofd", "hoofdredacteur", "schoonmaker", "invalkracht", "vakantiewerk", "bijbaan", "Rutgers University", "docent wiskunde", "docent natuurkunde", "docent scheikunde", "docent biologie", "docent economie", "docent frans", "docent duits", "docent engels", "docent spaans", "docent nederlands", "docent nt2", "docent geschiedenis", "docent aardrijkskunde", "docent lichamelijke opvoeding", "physical education", "1e graads", "2e graads", "eerstegraads", "tweedegraads", "leerkracht", "leraar", "lyceum", "*mavo", "*stagiar*", "engineer", "monteur", "doktersassistent*", "verpleegkundige", "accountmanager", "tpm"],
@@ -209,6 +209,42 @@
       "naam": "Google Alert: yoga bij universiteiten & bedrijven",
       "google_zoekopdracht": "vacature yogadocent OR \"yoga docent\" universiteit OR studentensport OR bedrijfsvitaliteit",
       "url": "https://www.google.com/alerts/feeds/16653873032599811621/18172048791587967278",
+      "filter": "titel", "alleen_vacatures": "titel"
+    },
+    {
+      "naam": "Google Alert: impactjournalistiek",
+      "google_zoekopdracht": "vacature \"De Correspondent\" OR \"Follow the Money\" OR Investico OR OneWorld",
+      "url": "https://www.google.com/alerts/feeds/16653873032599811621/11639510866996229234",
+      "filter": "titel", "alleen_vacatures": "titel"
+    },
+    {
+      "naam": "Google Alert: onderwijs, lezen & leren",
+      "google_zoekopdracht": "vacature \"Lezen & Schrijven\" OR Kennisnet OR \"Anne Frank Stichting\" OR \"Schouten & Nelissen\"",
+      "url": "https://www.google.com/alerts/feeds/16653873032599811621/17030093738018210295",
+      "filter": "titel", "alleen_vacatures": "titel"
+    },
+    {
+      "naam": "Google Alert: musea & digitale cultuur",
+      "google_zoekopdracht": "vacature Rijksmuseum OR \"Het Nieuwe Instituut\" OR \"Eye Filmmuseum\"",
+      "url": "https://www.google.com/alerts/feeds/16653873032599811621/17506027563675978804",
+      "filter": "titel", "alleen_vacatures": "titel"
+    },
+    {
+      "naam": "Google Alert: gender & gelijkheid",
+      "google_zoekopdracht": "vacature IHLIA OR \"COC Nederland\" OR \"Women Inc\" OR \"Oxfam Novib\"",
+      "url": "https://www.google.com/alerts/feeds/16653873032599811621/6461741648522151319",
+      "filter": "titel", "alleen_vacatures": "titel", "taal_bij_google": "Alle talen"
+    },
+    {
+      "naam": "Google Alert: democratie & mensenrechten",
+      "google_zoekopdracht": "vacature \"Amnesty International\" OR \"College voor de Rechten van de Mens\" OR NIMD",
+      "url": "https://www.google.com/alerts/feeds/16653873032599811621/12303241801318118033",
+      "filter": "titel", "alleen_vacatures": "titel", "taal_bij_google": "Alle talen"
+    },
+    {
+      "naam": "Google Alert: mentale gezondheid",
+      "google_zoekopdracht": "vacature Trimbos-instituut OR \"MIND Us\" OR \"MIND Korrelatie\"",
+      "url": "https://www.google.com/alerts/feeds/16653873032599811621/16040906714463905365",
       "filter": "titel", "alleen_vacatures": "titel"
     }
   ]
