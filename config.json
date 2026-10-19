@@ -21,7 +21,7 @@
     "docent wiskunde", "docent natuurkunde", "docent scheikunde", "docent biologie", "docent economie", "docent frans", "docent duits", "docent engels", "docent spaans", "docent nederlands", "docent nt2", "docent geschiedenis", "docent aardrijkskunde", "docent lichamelijke opvoeding", "physical education", "1e graads", "2e graads", "eerstegraads", "tweedegraads", "leerkracht", "leraar", "lyceum", "*mavo",
     "hr", "human resources", "recruit*", "p&o", "personeelszaken", "personeelsadviseur", "salaris*", "talent acquisition",
     "*controller", "controlling", "financ*", "*boekhoud*", "accountant", "administrateur", "*administratie", "crediteur*", "debiteur*", "asset*", "treasur*", "fiscal*",
-    "beveilig*", "security", "bewaker", "receptie*", "receptionist*", "facilitair*", "facility", "huismeester", "concierge", "gebouwbeheer*", "schoonmaak*", "schoonmaker", "horeca*", "barmedewerker", "bediening", "kok", "keuken*", "gastvrijheid*", "gastheer", "gastvrouw", "kassa*", "suppoost", "zaalwacht*", "museumwacht*",
+    "beveilig*", "security", "bewaker", "receptie*", "receptionist*", "facilitair*", "facility", "huismeester", "concierge", "gebouwbeheer*", "schoonmaak*", "schoonmaker", "horeca*", "barmedewerker", "bediening", "kok", "keuken*", "gastvrijheid*", "gastheer", "gastvrouw", "kassa*", "suppoost", "zaalwacht*", "museumwacht*", "chef", "restaurant*", "bar", "front office", "housekeeping", "banquet*", "reservering*", "technische dienst", "algemene dienst", "oproepkracht", "medewerker verzorging",
     "engineer", "monteur", "*technicus", "podiumtechni*", "*restaurator", "ict*", "it-*", "developer", "software*", "systeembeheer*", "servicedesk", "elektricien", "tpm",
     "jurist", "juridisch*", "advocaat", "inkoop*", "inkoper", "magazijn*", "logistiek*", "chauffeur",
     "doktersassistent*", "verpleegkundige", "*psycholoog", "accountmanager", "sales", "managementassistent*", "*secretaresse", "Rutgers University"
@@ -271,7 +271,7 @@
     },
     {
       "naam": "Google Alert: mindfulness & vitaliteit",
-      "google_zoekopdracht": "vacature \"Centrum voor Mindfulness\" OR OpenUp OR mindfulnesstrainer OR \"trainer duurzame inzetbaarheid\"",
+      "google_zoekopdracht": "vacature \"Centrum voor Mindfulness\" OR mindfulnesstrainer OR vitaliteitscoach OR \"trainer duurzame inzetbaarheid\"",
       "url": "https://www.google.com/alerts/feeds/16653873032599811621/15006218051670407792",
       "filter": "titel", "alleen_vacatures": "titel"
     }
