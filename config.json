@@ -4,7 +4,7 @@
   "zoektermen": {
     "Educatie & onderwijs": ["*educati*", "educator", "museumdocent", "onderwijs*", "zij-instro*", "lesmateriaal", "mediawijs*", "*mediaconsulent", "leesconsulent", "e-learning", "learning", "opleidingsontwikkel*", "trainer", "studiebegeleid*", "studieloopbaan*", "cultuurorganisator", "studieadviseur", "studentadviseur", "student advisor", "tutor", "mentor*", "*mediacoach", "cultuuronderwijs"],
     "Journalistiek & content": ["redacteur", "eindredacteur", "redactie*", "*journalist*", "correspondent*", "verslaggever", "content*", "copywriter", "tekstschrijver", "podcast*", "storytell*", "*journalism*", "persvrijheid", "press freedom", "eindredactie", "programmamaker", "radio*", "audiomaker", "debat*"],
-    "Welzijn & persoonlijke ontwikkeling": ["*welzijn*", "wellbeing", "well-being", "vitaliteit*", "yoga*", "mindfulness", "coach*", "zingeving", "spiritu*", "levensbeschouw*", "meditatie", "retreat*", "ademwerk"],
+    "Welzijn & persoonlijke ontwikkeling": ["*welzijn*", "wellbeing", "well-being", "vitaliteit*", "yoga*", "mindfulness", "coach*", "zingeving", "spiritu*", "levensbeschouw*", "meditatie", "retreat*", "ademwerk", "hapto*", "lichaamsgericht*", "lichaamswerk", "veerkracht*", "duurzame inzetbaarheid", "systemisch*"],
     "Maatschappelijk & impact": ["programmamedewerker", "projectmedewerker", "programmacoordinator", "projectcoordinator", "impact*", "community*", "adviseur", "beleidsmedewerker", "trainee*", "publieksbegeleid*", "erfgoed*", "collectie*", "basisvaardigheden", "laaggeletterd*", "participatie*", "democrati*", "burgerschap*", "*geletterdheid", "project coordinator", "programme coordinator", "program coordinator", "publiekseducatie", "publieksprogramm*", "publieksparticipatie"],
     "Onderzoek & kennis": ["*onderzoeker", "onderzoeks*", "researcher", "research*", "kennismedewerker", "kennisadviseur", "kennisontwikkel*"],
     "Internationaal & Europees": ["internationalisering*", "international office", "erasmus*", "europe*", "eu-project*"],
@@ -12,7 +12,7 @@
     "Boeken & taal": ["uitgever*", "boeken*", "boekhandel*", "litera*", "lees*", "bureauredacteur", "editor", "corrector", "taal*", "lexicogra*", "vertal*", "schrijf*", "poezie", "spoken word"],
     "Ontsluiten & metadata": ["index*", "metadata*", "catalogise*", "documentalist", "informatiespecialist", "archief*", "archivaris", "digitalisering*"],
     "Gedrag & leren": ["gedrag*", "behavioural", "behavioral", "opleidings*", "leerconsultant", "l&d", "teamcoach", "teamontwikkel*", "facilitator", "procesbegeleid*"],
-    "Passende organisatie": ["Atria", "Rutgers", "Movisie", "Verwey-Jonker", "Kennisplatform Inclusief Samenleven", "Rathenau*", "Waag", "ProDemos", "Bits of Freedom", "Free Press Unlimited", "European Journalism Centre", "Are We Europe", "Nuffic", "VPRO", "NTR", "NPO", "Nooit Meer Slapen", "Letterenfonds", "Stichting Lezen", "CPNB", "Literatuurmuseum", "Writers Unlimited", "Onze Taal", "Taalunie", "Instituut voor de Nederlandse Taal", "Huygens*", "Meertens*", "Beeld en Geluid", "Koninklijke Bibliotheek", "Pakhuis de Zwijger", "De Balie", "Spui25", "Studium Generale", "Happinez", "Psychologie Magazine", "Noordhoff", "Malmberg", "ThiemeMeulenhoff", "IMC Weekendschool", "Weekendschool", "De Correspondent", "Follow the Money", "Investico", "OneWorld", "Lezen & Schrijven", "Lezen en Schrijven", "Kennisnet", "Anne Frank Stichting", "Anne Frank Huis", "Schouten & Nelissen", "Schouten en Nelissen", "Rijksmuseum", "Nieuwe Instituut", "Eye Filmmuseum", "IHLIA", "COC", "Women Inc", "Oxfam", "Amnesty", "College voor de Rechten van de Mens", "NIMD", "Trimbos*", "MIND Us", "MIND Korrelatie"]
+    "Passende organisatie": ["Atria", "Rutgers", "Movisie", "Verwey-Jonker", "Kennisplatform Inclusief Samenleven", "Rathenau*", "Waag", "ProDemos", "Bits of Freedom", "Free Press Unlimited", "European Journalism Centre", "Are We Europe", "Nuffic", "VPRO", "NTR", "NPO", "Nooit Meer Slapen", "Letterenfonds", "Stichting Lezen", "CPNB", "Literatuurmuseum", "Writers Unlimited", "Onze Taal", "Taalunie", "Instituut voor de Nederlandse Taal", "Huygens*", "Meertens*", "Beeld en Geluid", "Koninklijke Bibliotheek", "Pakhuis de Zwijger", "De Balie", "Spui25", "Studium Generale", "Happinez", "Psychologie Magazine", "Noordhoff", "Malmberg", "ThiemeMeulenhoff", "IMC Weekendschool", "Weekendschool", "De Correspondent", "Follow the Money", "Investico", "OneWorld", "Lezen & Schrijven", "Lezen en Schrijven", "Kennisnet", "Anne Frank Stichting", "Anne Frank Huis", "Schouten & Nelissen", "Schouten en Nelissen", "Rijksmuseum", "Nieuwe Instituut", "Eye Filmmuseum", "IHLIA", "COC", "Women Inc", "Oxfam", "Amnesty", "College voor de Rechten van de Mens", "NIMD", "Trimbos*", "MIND Us", "MIND Korrelatie", "LTC Training", "NextSteps*", "Mind the Body", "Ynnergy", "BuroVitaal", "De Baak", "Kessels & Smit", "Kessels en Smit", "Phoenix Opleidingen", "Academie voor Haptonomie", "Saswitha", "Centrum voor Mindfulness", "OpenUp"]
   },
 
   "uitsluiten_als_in_titel": [
@@ -255,6 +255,24 @@
       "naam": "Google Alert: mentale gezondheid",
       "google_zoekopdracht": "vacature Trimbos-instituut OR \"MIND Us\" OR \"MIND Korrelatie\"",
       "url": "https://www.google.com/alerts/feeds/16653873032599811621/16040906714463905365",
+      "filter": "titel", "alleen_vacatures": "titel"
+    },
+    {
+      "naam": "Google Alert: training & coaching (lichaamsgericht)",
+      "google_zoekopdracht": "vacature \"LTC Training\" OR NextSteps OR \"Mind the Body\" OR Ynnergy OR BuroVitaal",
+      "url": "https://www.google.com/alerts/feeds/16653873032599811621/4280523003569535025",
+      "filter": "titel", "alleen_vacatures": "titel"
+    },
+    {
+      "naam": "Google Alert: opleidingsinstituten persoonlijke ontwikkeling",
+      "google_zoekopdracht": "vacature \"De Baak\" OR \"Kessels & Smit\" OR \"Phoenix Opleidingen\" OR \"Academie voor Haptonomie\" OR Saswitha",
+      "url": "https://www.google.com/alerts/feeds/16653873032599811621/112427389840732666",
+      "filter": "titel", "alleen_vacatures": "titel"
+    },
+    {
+      "naam": "Google Alert: mindfulness & vitaliteit",
+      "google_zoekopdracht": "vacature \"Centrum voor Mindfulness\" OR OpenUp OR mindfulnesstrainer OR \"trainer duurzame inzetbaarheid\"",
+      "url": "https://www.google.com/alerts/feeds/16653873032599811621/15006218051670407792",
       "filter": "titel", "alleen_vacatures": "titel"
     }
   ]
